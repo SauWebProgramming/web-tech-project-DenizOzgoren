@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÜ Film Rehberi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="sayfaDegistir('anasayfa')">🎬 SAÜ FİLM</div>
+        <nav>
+            <input type="text" id="searchInput" placeholder="Film ara...">
+            <select id="categoryFilter">
+                <option value="Hepsi">Tüm Kategoriler</option>
+                <option value="Bilim Kurgu">Bilim Kurgu</option>
+                <option value="Aksiyon">Aksiyon</option>
+                <option value="Dram">Dram</option>
+                <option value="Suç">Suç</option>
+                <option value="Gerilim">Gerilim</option>
+            </select>
+            <select id="sortOrder">
+                <option value="varsayilan">Sırala: Varsayılan</option>
+                <option value="puan-yuksek">Puan (Yüksekten Düşüğe)</option>
+                <option value="yil-yeni">Yıl (En Yeni)</option>
+            </select>
+            <button class="nav-btn" onclick="sayfaDegistir('anasayfa')">Anasayfa</button>
+            <button class="nav-btn" onclick="sayfaDegistir('favoriler')">Favorilerim ❤️</button>
+        </nav>
+    </header>
+
+    <main id="app">
+        <h2 id="pageTitle">Tüm Filmler</h2>
+        <div id="movie-list" class="grid-container"></div>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="modalKapat()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>ISE-201 Web Teknolojileri Ödevi - 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
